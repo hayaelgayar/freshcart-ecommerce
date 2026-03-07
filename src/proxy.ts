@@ -7,7 +7,7 @@ export default async function proxy(req:NextRequest) {
   if(jwt!=null){
     return NextResponse.next()
   }
-  return NextResponse.redirect("http://localhost:3000/login")
+   return NextResponse.redirect(new URL("/login", req.url))
 }
 export const config={
     matcher:["/cart","/order"]
