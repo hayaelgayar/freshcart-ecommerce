@@ -10,10 +10,7 @@ export  const login=async(data:LoginType)=>{
      console.log("Login success:", res.data)
      toast.success("Welcome Back!",{position:'top-center'})
   return true
-    } catch (error) {
-       console.log("Error status:", error.response?.status)
-    console.log("Error data:", error.response?.data)
-    console.log("Error message:", error.response?.data?.message)
+    } catch (error:any) {
       const errorMessage = error.response?.data?.message || "Invalid email or password"
     toast.error(errorMessage, { position: 'top-center' })
     return false

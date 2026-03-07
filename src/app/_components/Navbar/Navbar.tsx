@@ -13,7 +13,7 @@ export default function Navbar() {
   function handlelogout(){
     signOut({redirect:true, callbackUrl:"/login"})
   }
- const {numOfCartItems}= useContext(cartContext)
+ const {numOfCartItems}= useContext(cartContext) as any
    const session=useSession()
   return <>
  <nav>

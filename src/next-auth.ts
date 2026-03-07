@@ -40,7 +40,7 @@ pages:{
 callbacks:{
 jwt(params){
     if(params.user){
-params.token.realTokenFromBackEnd=params.user.realTokenFromBackEnd
+(params.token as any).realTokenFromBackEnd=(params.user as any).realTokenFromBackEnd
     }
     return params.token
 },

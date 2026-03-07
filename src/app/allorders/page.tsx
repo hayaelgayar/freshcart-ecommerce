@@ -8,7 +8,7 @@ import {jwtDecode} from 'jwt-decode'
 export async function getUserOrder() {
     const token= await getMyToken()
 
-const userData=jwtDecode(token as string)
+const userData:any=jwtDecode(token as string)
 
 
     const {data}=await axios.get(`https://ecommerce.routemisr.com/api/v1/orders/user/${userData.id}`,{

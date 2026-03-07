@@ -9,6 +9,7 @@ import { getMyToken } from '../_actions/getMyToken'
 import axios from 'axios'
 
 export default function AddToWishlistBtn({ productId }: { productId: string }) {
+    const [isLoading, setIsLoading] = useState(false)
 const {setwishlistData,setnumOfWishItems,wishlistData}=useContext(wishlistContext)
 const [clicked, setClicked] = useState(() => 
     wishlistData?.some((item:any) => item._id === productId) || false

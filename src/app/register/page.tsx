@@ -60,7 +60,7 @@ const [loading, setloading] = useState(false);
   
   <Controller
   key={name}
-  name={name} control={form.control} render={({field,fieldState})=><Field data-invalid={fieldState.invalid}>
+  name={name as keyof RegisterType} control={form.control} render={({field,fieldState})=><Field data-invalid={fieldState.invalid}>
       <FieldLabel htmlFor={field.name}>{name}</FieldLabel>
       <Input
         {...field}

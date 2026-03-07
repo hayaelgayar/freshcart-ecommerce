@@ -8,7 +8,7 @@ import { cartContext } from '../_Providers/CartContext'
 
 export default function AddToCartBtn({ productId }: { productId: string }) {
     const [isLoading, setIsLoading] = useState(false)
-const {setcartData,setnumOfCartItems}=useContext(cartContext)
+const {setcartData,setnumOfCartItems}=useContext(cartContext) as any
     const handleAddItem = async () => {
         setIsLoading(true)
         try {

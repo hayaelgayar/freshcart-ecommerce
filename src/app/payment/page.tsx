@@ -20,9 +20,9 @@ export default function Payment() {
     }
  })
 
- const {cartId,setnumOfCartItems,setcartData}=useContext(cartContext)
+ const {cartId,setnumOfCartItems,setcartData}=useContext(cartContext) as any
  
- async function handlepayment(value) {
+ async function handlepayment(value:any) {
     const userData:shippingAddressType={
         shippingAddress:{
             city:value.city,

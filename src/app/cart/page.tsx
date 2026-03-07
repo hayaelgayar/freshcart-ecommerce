@@ -26,7 +26,7 @@ if (!context) {
   return <div>Loading...</div>
 }
 
-const { numOfCartItems, cartData, setnumOfCartItems, setcartData } = context
+const { numOfCartItems, cartData, setnumOfCartItems, setcartData } = context as any
   
   async function  handleCountUpdate(productId: string,count:number){
   const res= await updateCount(productId,count)
