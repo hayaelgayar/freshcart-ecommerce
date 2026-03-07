@@ -1,6 +1,5 @@
 import React from "react"
 import Link from "next/link";
-import Image from "next/image";
 
 
 
@@ -29,7 +28,7 @@ export default async function Brands() {
             href={`/brands/${item._id}`}
             className="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition-transform transform hover:scale-105"
           >
-            <Image width={500} height={500}
+            <img
               src={item.image}
               alt={item.name}
               className="w-full h-48 object-cover"
